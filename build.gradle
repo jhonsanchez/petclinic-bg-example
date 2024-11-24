@@ -31,7 +31,7 @@ sonar {
   properties {
     property "sonar.projectKey", "spring-petclinic"
     property "sonar.organization", "TargetSec"
-//    property "sonar.host.url", "http://localhost:9000"
+    property "sonar.host.url", "http://sonarqube-sonarqube.sonarqube:9000"
     property("sonar.sources", "src/main")
     property "sonar.tests", "src/test"
   }
@@ -75,6 +75,7 @@ dependencies {
 
 tasks.named('test') {
   useJUnitPlatform()
+  finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
 checkstyle {
