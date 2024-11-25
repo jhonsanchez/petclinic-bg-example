@@ -53,7 +53,6 @@ import org.testcontainers.DockerClientFactory;
 		"spring.docker.compose.profiles.active=postgres" })
 @ActiveProfiles("postgres")
 @DisabledInNativeImage
-@Disabled
 public class PostgresIntegrationTests {
 
 	@LocalServerPort

@@ -33,7 +33,6 @@ import org.springframework.samples.petclinic.vet.VetRepository;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@Disabled
 public class PetClinicIntegrationTests {
 
 	@LocalServerPort
