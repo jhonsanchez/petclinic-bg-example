@@ -79,9 +79,8 @@ tasks.named('test') {
 }
 
 checkstyle {
-//  configDirectory = project.file('src/checkstyle')
-//  configFile = file('src/checkstyle/nohttp-checkstyle.xml')
-  checkstyleTest.enabled = false
+  configDirectory = project.file('src/checkstyle')
+  configFile = file('src/checkstyle/nohttp-checkstyle.xml')
 }
 
 checkstyleNohttp {
@@ -95,6 +94,8 @@ tasks.named("formatMain").configure { dependsOn("checkstyleNohttp") }
 tasks.named("formatTest").configure { dependsOn("checkstyleTest") }
 tasks.named("formatTest").configure { dependsOn("checkstyleNohttp") }
 
+checkstyleTest.enabled = false
+checkstyleNohttp.enabled = false
 checkstyleAot.enabled = false
 checkstyleAotTest.enabled = false
 
