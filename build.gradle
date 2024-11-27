@@ -17,7 +17,7 @@ apply plugin: 'io.spring.javaformat'
 gradle.startParameter.excludedTaskNames += [ "checkFormatAot", "checkFormatAotTest" ]
 
 group = 'org.springframework.samples'
-version = '3.3.0'
+version = '1.0.0'
 
 java {
   sourceCompatibility = JavaVersion.VERSION_17
